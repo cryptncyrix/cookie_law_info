@@ -1,0 +1,40 @@
+{
+    "name": "cyrixbiz/cookie",
+	"description": "Message for using Cookies",
+    "keywords": [
+        "cookie",
+        "eu",
+        "dsgvo",
+        "security"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Kupka",
+            "email": "admin@cyrix.biz",
+            "homepage": "http://www.cyrix.biz",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">= 7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "cyrixbiz\\cookie\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "cyrixbiz\\cookie\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "cyrixbiz\\cookie\\CookieServiceProvider"
+            ]
+        }
+    }
+}
