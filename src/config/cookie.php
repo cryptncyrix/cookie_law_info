@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 return
 [
@@ -18,12 +18,11 @@ return
         /**
          * CookieName
          */
-        'name' => 'cyrixbiz_set_law_cookie',
+        'name' => 'cyrixbiz_set_law_cookile',
 
         /**
          * View-File Name
          */
-
         'layout' => 'CookieView::layout.message',
 
         /**
@@ -34,7 +33,12 @@ return
         /**
          * Template Tag to set the View
          */
-        'tag' => '</body>'
+        'tag' => '</body>',
+
+        /**
+         * Don't allow Cookies - GoHome
+         */
+        'fallback' => 'https://www.google.de'
     ],
 
     'template' =>

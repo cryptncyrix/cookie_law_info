@@ -6,7 +6,7 @@
           config('cookie.cookie.mechanism') == 'Ajax')
          @include('CookieView::partials.'. strtolower(config('cookie.cookie.mechanism')))
       @else
-           <div>{{ __('CookieLang::view.error_mechanism') }} </div>
+           <div class="alert alert-danger">{{ __('CookieLang::view.error_mechanism') }} </div>
       @endif
 
       @if(config('cookie.template.extern_bootstrap'))

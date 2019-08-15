@@ -30,7 +30,6 @@ class Cookie {
     public function handle(Request $request, Closure $next)
     {
         $response = $next($request);
-
         if(! $this->checkResponse($response))
         {
             return $this->addViewToResponseOnTheFly($response);
@@ -61,7 +60,6 @@ class Cookie {
             }
         }
         return $return;
-
     }
 
     /**
@@ -80,13 +78,11 @@ class Cookie {
     protected function addViewToResponseOnTheFly(Response $response) : ?Response
     {
         $content        = $this->getContent($response);
-
         $tagPosition    = $this->getPositionFromTag($content, config('cookie.cookie.tag'));
         $content        = ''
             . substr($content, 0 , $tagPosition)
             . view(config('cookie.cookie.layout'))->render()
             . substr($content, $tagPosition);
-
         return $response->setContent($content);
     }
 
