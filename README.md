@@ -1,5 +1,5 @@
 # Cookie Law Info
-######A Cookie Law Info Script with Laravel
+###### A Cookie Law Info Script with Laravel
 
 
 * Use this Cookie _ Law _ Script on your own risk. Ask a lawyer for more informations.
