@@ -26,8 +26,7 @@
             url: '{{route("setCookie.setAjaxCookie")}}',
             data: '_token = {{ csrf_token() }}',
             success: function (data) {
-                $("#cookie_law_modal").remove();
-                $('.modal-backdrop').hide();
+                $("#cookie_law_modal").modal('hide');
             },
         });
     }
