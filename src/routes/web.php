@@ -15,5 +15,10 @@ Route::post('setAjaxCookie', function () {
  * Go Home
  */
 Route::get('goHome', function () {
+    $aCookie = [];
+    foreach (Cookie::get() as $key => $value)
+    {
+        $aCookie[$key] = Cookie::forget($key);
+    }
     return redirect()->to(config('cookie.cookie.fallback'));
 })->name('setCookie.goHome');

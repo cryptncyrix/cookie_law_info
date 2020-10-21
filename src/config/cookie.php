@@ -28,7 +28,7 @@ return
         /**
          * Cookie_LifeTime
          */
-        'life_time' => 60,
+        'life_time' => 3600,
 
         /**
          * Template Tag to set the View
